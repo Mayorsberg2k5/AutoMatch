@@ -1,0 +1,569 @@
+
+:root {
+    --darkgreen: #081c15;
+    --lightgreen: #588157
+}
+
+/*Nav bar for all pages*/
+nav * {
+    display: inline-flex;
+    margin: 0;
+    padding-top: 0.2%;
+    font-family: "Lato";
+    font-size: 1.1em;
+    
+}
+
+nav ul *  {
+    text-decoration: none;
+    Color: white;   
+}
+
+nav a:link {
+    Color: white;
+}
+
+nav a:visited {
+    Color: white;
+}
+
+nav a:hover {
+    font-weight: bold;
+    color: white;
+}
+
+nav a:active{
+    font-weight:bold;
+    color: white;
+}
+
+.topnav-centered {
+    display: inline-flex;
+    justify-content: center;
+    align-items:center;
+    gap: 5%;
+    padding-left: 21%;
+    right: auto;
+    position: absolute;
+    width: 50%;
+    margin-top: 0;
+}
+
+.topnav-right {
+    margin-top: 0.2%;
+    padding-right: 50px;
+    float: right;
+    gap: 50%;
+}
+
+.nav-home {
+    margin-top: 0.35%;
+    padding-left: 2%;
+}
+
+/*Home page styling.. Very minimal. Just a landing page.*/
+.homebody {
+    max-width: 100vw;
+    background-image: url(/public/images/swanway.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    font-size: 1em;
+    margin: 0px;
+}
+
+.home-body {
+    text-align: center;
+    color: white;
+    font-size: 2.0em;
+    margin-top: 12%;
+
+}
+
+/*scroll down arrow for home page only. Will built functionality with javascript in future TODO*/
+.scroll-down {
+  position: absolute;
+  left: 50%;
+  bottom: 2%;
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  z-index: 100;
+  text-decoration: none;
+  text-shadow: 0;
+  width: 3.0em;
+  height: 3.0em;
+  border-bottom: 0.3em solid var(--darkgreen);
+  border-right: 0.3em solid var(--darkgreen);
+  z-index: 9;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%) rotate(45deg);
+  -moz-transform: translate(-50%, 0%) rotate(45deg);
+  transform: translate(-50%, 0%) rotate(45deg);
+  -webkit-animation: fade_move_down 4s ease-in-out infinite;
+  -moz-animation:    fade_move_down 4s ease-in-out infinite;
+  animation:         fade_move_down 3s ease-in-out infinite;
+}
+/*scroll arrow animation*/
+@-webkit-keyframes fade_move_down {
+  0%   { -webkit-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { -webkit-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+}
+@-moz-keyframes fade_move_down {
+  0%   { -moz-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { -moz-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+}
+@keyframes fade_move_down {
+  0%   { transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { transform:translate(0,10px) rotate(45deg); opacity: 0; }
+}
+
+/*background gradient for all other pages*/
+.pagebackground {
+    height: 100vh;
+    width: 100%;
+    background: #5a3f37; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #5a3f37, #205230); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #5a3f37, #205230); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* FAQ page */
+*, 
+*::before, 
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+.faqpage {
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;    
+    box-sizing: border-box;
+}
+
+/* Section used for centering the FAQ  */
+.faqs {
+    width: 100%;
+    height: 100vh;
+    max-height: 97%;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.container {
+    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.accordion-item {
+    /* background color of the accordion */
+    background-color: var(--lightgreen);
+    border-radius: .4rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    box-shadow:.5rem 2px .5rem rgba(0,0,.1);
+}
+
+.accordion-link {
+    font-size: 1.6rem;
+    color: rgba(255,255,255,.8);
+    text-decoration: none;
+    width: 100%;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.answer {
+ max-height: 5;
+ overflow: hidden;
+ position: relative;
+ background-color: var(--darkgreen);
+}
+
+.answer::before{
+    content: "";
+    position: absolute;
+    width: 6rem;
+    height: 90%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.answer p {
+    color: rgba(255,255,255,.6);
+    font-size: 1.4rem;
+    padding: 2rem;
+}
+
+.accordion-item:target .answer {
+    max-height: 20rem;
+}
+
+
+/* button decoration for Get started  */
+.get-started {
+    text-decoration:none;
+    font-weight: bold;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--lightgreen);
+    border-radius: 50px;
+    margin: auto;
+    width: 200px;
+    height: 100px;
+    margin-bottom: 10rem;
+    color: white;
+}
+
+.get-started:hover {
+    color: var(--darkgreen);
+}
+
+.get-startedfaq {
+    text-decoration:none;
+    font-weight: bold;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--lightgreen);
+    border-radius: 50px;
+    margin: auto;
+    width: 200px;
+    height: 100px;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    color: white;   
+}
+
+.get-startedfaq:hover {
+    color: var(--darkgreen);
+}
+
+details {
+margin: 5px;
+font-size: 18px;
+}
+
+details > * {
+padding: .75rem;
+}
+
+summary {
+font-size: 20px;
+font-family: sans-serif;
+font-weight: bold;
+cursor: pointer;
+position: relative;
+}
+
+summary::marker {
+content: "+";
+}
+
+summary[open]::marker {
+    content: "-";
+  }
+
+summary::before {
+content:"";
+position:absolute;
+inset: .50rem;
+left: auto;
+aspect-ratio: 1;
+background: 
+conic-gradient(from 90deg at 33% 33%, #0000 90deg, #fff 0) 
+100% 100%/60% 60%;
+clip-path: inset(1px);
+}
+
+details[open] summary::before {
+background: linear-gradient(#fff 0 0) 50%/100% 25% no-repeat;
+}
+
+details[open] summary {
+border-radius: 5px 5px 0 0;
+}
+
+details > div {
+background: #ddd;
+border-radius: 0 0 5px 5px;
+}
+
+
+/* styling for the How it works page  */
+.workspage{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink:3;
+    flex-direction:column;
+    text-align: center;
+    background-color: white;
+    border-style: solid;
+    border-width: thick;
+    width: 80%;
+    height: 50%;
+    max-width: 80%;
+    padding: 50;
+    margin: 5% auto;
+    font-size: 1.4em;
+    border-color: var(--darkgreen);
+    font-weight: bold;
+}
+
+.workspage h1 {
+    margin: 10% auto;
+    padding-bottom: 30px;
+    text-decoration: underline;
+}
+
+/* This is for the content under "the H1"  */
+.aboutworks {
+    width: 70%;
+    max-width: 70%;
+    display:flex;
+    border-width: thick;
+    margin-right: 30%;
+    margin-left: 30%;
+}
+
+.aboutworks p {
+    display: flex;
+}
+
+/* Styling for the Contact page */
+
+
+.contactcontainer {
+    width:80%;
+    margin: 50px auto;
+    font-family: "Noto Sans", sans-serif;
+}
+
+.contactpage h2 {
+    padding-top: 10px;
+}
+
+.contact {
+    padding-top: 5%;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+
+}
+.contactbox{
+    display: flex;
+}
+
+.contact-left {
+    flex-basis: 60%;
+    padding: 40px 60px;
+    background-color: white;
+}
+
+.contact-right {
+    flex-basis: 40%;
+    padding: 40px;
+    background-color: var(--darkgreen);
+    color: white;
+}
+
+.contactcontainer h1 {
+    margin-bottom: 10px;
+
+}
+
+.contactcontainer p{
+    margin-bottom: 40px;
+}
+
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.input-row .input-group {
+    flex-basis: 45%;
+}
+
+input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    padding-bottom: 5px;
+}
+
+textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    outline: none;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+label {
+    margin-bottom: 6px;
+    display: block;
+    color: var(--darkgreen);
+}
+
+.contactsend{
+    background: var(--lightgreen);
+    width: 100px;
+    border: none;
+    outline: none;
+    color: white;
+    height: 35px;
+    border-radius: 30px;
+    margin-top: 20px;
+    box-shadow: 0 px 5px 15px 0px rgba(28, 0, 181, 0.3);
+}
+
+
+.contact-left h3 {
+    color: var(--darkgreen);
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.contact-right h3{
+    color: white;
+    font-weight: bold;
+}
+
+.contactcontainer h1 {
+    font-size: 3em;
+    text-align: center;
+    padding-top: 100px;
+    color: white;
+
+}
+
+.contactcontainer p {
+    font-size: 1.5em;
+    text-align: center;
+    padding-bottom: 100px;
+    color: white;
+}
+
+.contacts-logos {
+    padding-top: 10px;
+    padding-bottom: 40px;
+    display:flex;
+    gap: 5px;
+    font-size: 1.4em;
+}
+
+.contacts-logos a {
+    text-decoration: none;
+}
+
+.fa-solid {
+    color: white;
+}
+
+.fa-brands{
+    color: white;
+}
+
+tr td:first-child {
+    padding-right: 20px;
+}
+
+tr td {
+    padding-top: 20px;
+}
+
+.hamburgerbutton {
+    background-color: transparent;
+    border-width: 0;
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+}
+
+/* target tablets   */
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    nav {
+        margin-top: 15px;
+    }
+
+    .topnav-centered {
+        bottom: 1%;
+    }
+
+    nav ul * {
+
+        flex-direction: column;
+        max-width: 100%;
+    
+    }
+        nav ul.show{
+        display: flex;
+    }
+        .hamburgerbutton {
+        display: inline-flex;
+        justify-content: center;
+        align-items:center;
+        gap: 5%;
+        padding-left: 21%;
+        right: auto;
+        position: absolute;
+        width: 50%;
+        color: white;
+        background-color:transparent;
+        cursor: pointer;
+        font-size: 30px;
+
+    }
+
+    .accordion-link {
+    font-size: 1.5rem;
+
+}
+
+/* target mobile   */
+@media screen and (min-width: 769px) {
+    .hamburgerbutton{
+        display:none;
+    }
+
+    .aboutworks {
+        width: 90%
+    };
+    
+}
+
+/* target desktop   */
+@media screen and (min-width: 1024px) {
+    .hamburgerbutton{
+        display:none;
+    }
+    .workspage{
+        width:50%;
+    }
+}
+}
