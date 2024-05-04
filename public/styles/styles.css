@@ -37,6 +37,10 @@ nav a:active{
     color: white;
 }
 
+nav button {
+    display: none;
+}
+
 .topnav-centered {
     display: inline-flex;
     justify-content: center;
@@ -546,9 +550,9 @@ tr td {
 }
 
 /* target mobile   */
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 769px) and (max-width: 1200px) {
     .hamburgerbutton{
-        display:none;
+        display: none;
     }
 
     .aboutworks {
@@ -558,10 +562,7 @@ tr td {
 }
 
 /* target desktop   */
-@media screen and (min-width: 1024px) {
-    .hamburgerbutton{
-        display:none;
-    }
+@media screen and (min-width: 1200px) {
     .workspage{
         width:50%;
     }
