@@ -8,7 +8,7 @@
         // Check if the scroll position exceeds the threshold
         if (scrollPosition > scrollThreshold) {
             // Redirect to the new website
-            window.location.href = "./Form.html";
+            window.location.href = "./form.html";
         }
     };
 
